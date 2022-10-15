@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fruits App</title>
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+  <body>
+    <h1>Edit <%= chip.brand + " " + chip.flavor %></h1>
+    
+    <form action="/chips/<%= chipsIndex %>?_method=PUT" method="POST">
+      <!--  NOTE: the form is pre-populated with values for the server-->
+      <label for="brand">Brand:</label>
+      <input type="text" name="brand" value="<%=chip.brand%>" />
+      <br />
+      <label for="flavor">Flavor:</label>
+      <input type="text" name="flavor" value="<%=chip.flavor%>" />
+      <br />
+      <label for="size">Size:</label>
+      <input type="text" name="size" value="<%=chip.size%>" />
+      <br />
+      <input type="submit" name="" value="Submit Changes" />
+    </form>
+  </body>
+</html>

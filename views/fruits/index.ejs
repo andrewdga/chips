@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fruits App</title>
+  </head>
+  <body>
+    <h1>Fruits <%= title %> page</h1>
+
+    <ul>
+        <% for(let i = 0; i < allFruits.length; i++) { %>
+        <li>
+          <a href="/fruits/<%= i %>"> <%= allFruits[i].name %></a>
+          <!--  ADD DELETE FORM HERE-->
+          <form action="/fruits/<%=i%>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE" />
+          </form>
+
+          <!-- Add edit link here  -->
+          <a href="/fruits/<%=i%>/edit">Edit</a>
+        </li>
+        <% } %>
+    </ul>
+  </body>
+</html>

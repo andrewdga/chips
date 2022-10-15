@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Chips App</title>
+  </head>
+  <body>
+    <h1><%= chip.brand %> <%= chip.flavor %> | <%= chip.size %></h1>
+    <a href="/chips/<%= chipsIndex %>/edit">Edit Chips</a>
+    <hr>
+    <form action="/chips/<%= chipsIndex %>?_method=DELETE" method="POST">
+      <input type="submit" value="Delete Chip">
+    </form>
+  </body>
+</html>
+

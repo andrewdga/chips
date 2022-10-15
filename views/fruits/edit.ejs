@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fruits App</title>
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+  <body>
+    <h1>Edit Fruit Page</h1>
+    
+    <form action="/fruits/<%= index %>?_method=PUT" method="POST">
+      <!--  NOTE: the form is pre-populated with values for the server-->
+      <label for="name">Name:</label>
+      <input type="text" name="name" value="<%=fruit.name%>" />
+      <br />
+      <label for="color">Color:</label>
+      <input type="text" name="color" value="<%=fruit.color%>" />
+      <br />
+      <label for="readyToEat">Is Ready To Eat:</label>
+      <input type="checkbox" name="readyToEat" <% if(fruit.readyToEat){ %> checked <% } %> />
+      <br />
+      <input type="submit" name="" value="Submit Changes" />
+    </form>
+  </body>
+</html>
